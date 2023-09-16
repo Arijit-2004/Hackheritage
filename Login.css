@@ -5,64 +5,6 @@
     box-sizing: border-box;
  
  }
- header{
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     padding: 20px 100px;
-     background-color: aquamarine;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     z-index: 99;
- }
- .logo{
-     user-select: none;
-     font-size: 2em;
- }
- .navigation a{
-     position: relative;
-     color: rgba(4, 54, 78, 0.76);
-     text-decoration: none;
-     margin-left: 40px;
-     font-size: 1.1em;
-     font-weight: 500;
- }
- .navigation a::after{
-     content: '';
-     position: absolute;
-     width: 100%;
-     left: 0;
-     bottom: -6px;
-     height: 3px;
-     background: rgba(3, 53, 76, 0.61);
-     border-radius: 5px;
-     transform: scaleX(0);
-     transition: transform .5s;
- }
- .navigation a:hover::after{
-     transform-origin: left;
-     transform: scaleX(1);
- }
- .navigation .btnLogin{
-     position: relative;
-     width: 130px;
-     height: 50px;
-     background: transparent;
-     border: 2px solid ;
-     outline: none;
-     border-radius: 10px;
-     cursor: pointer;
-     font-size: 1.1em;
-     font-weight: 200;
-     margin-left: 40px;
-     transition: .5s;
- }
- .navigation .btnLogin:hover {
-     background-color: rgba(210, 251, 253, 0.668);
-     color: rgb(9, 174, 155);
- }
  body{
      display: flex;
      justify-content: center;
@@ -81,7 +23,7 @@
      align-items: center;
      justify-content: center;
      color: black;
-     top: 200px;
+     top: 100px;
      position:relative;
      padding-top: 25px;
      width: 400px;
@@ -115,7 +57,7 @@
      position: absolute;
      transition: none;
      transform: translate(420px, -400px);
-     padding: 8px;
+     padding: 18px;
      width: 100%;
      box-shadow: 10px;
  }
@@ -197,6 +139,7 @@
      margin: -15px 0 15px;
      justify-content: space-between;
      display: flex;
+     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
  }
  .remember-forget label input{
      accent-color: rgba(117, 73, 8, 0.791);
@@ -234,7 +177,7 @@
         transform: translateX(-50%);
         color: #000;
         }
-    .remember-forget {
+    /* .remember-forget {
       position: relative;
       padding-top: 5%;
       font-size: .9em;
@@ -246,7 +189,7 @@
       flex-direction: column;
       cursor: pointer;
       transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
+    } */
     
     .popup {
       position: absolute;
