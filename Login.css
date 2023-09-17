@@ -32,7 +32,7 @@
      overflow: hidden;
      transform: scale(0);
      background: transparent;
-     border: 2px solid rgba(4, 54, 78, 0.76);
+     border: 2px dashed rgba(117, 73, 8, 0.791);
      border-radius: 30px;
      backdrop-filter: blur(30px);
      transition: height .2s ease;
@@ -228,13 +228,24 @@
   button{
      font-size: medium;
      font-weight: 400;
-     background-color: rgba(117, 73, 8, 0.791);
+     /* background-color: rgba(117, 73, 8, 0.791); */
      height: 45px;
      width: 100%;
      border: none;
-     border-radius: 12px;
- 
- }
+     padding: 1em;
+     padding-left: 3em;
+     padding-right: 3em;
+     border: 2px dashed rgba(117, 73, 8, 0.791);
+     border-radius: 15px;
+     background-color: #EADDCA;
+     box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+     transition: .1s ease-in-out, .4s color;
+   }
+   
+   button:active {
+     transform: translateX(0.1em) translateY(0.1em);
+     box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+   }
  .login-register{
      font-size: .9em;
      color: rgba(168, 104, 9, 0.945);
