@@ -36,7 +36,7 @@
      left: 0;
      bottom: -6px;
      height: 3px;
-     background: rgba(3, 53, 76, 0.61);
+     background: rgba(117, 73, 8, 0.791);
      border-radius: 5px;
      transform: scaleX(0);
      transition: transform .5s;
@@ -77,6 +77,19 @@ section{
     min-height: 100vh;
     padding: 20%;
 }
+.ava{
+    display: flex;
+}
+.ava:nth-child(2){
+    transition-delay: 200ms;
+}
+.ava:nth-child(3){
+    transition-delay: 400ms;
+}
+.ava:nth-child(4){
+    transition-delay: 600ms;
+}
+
 .hidden{
     opacity: 0;
     filter: blur(5px);
