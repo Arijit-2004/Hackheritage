@@ -1,99 +1,265 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            Log-in & Sign-in Page
-        </title>
-        <link rel="stylesheet" href="Login.css">
-    </head>
-    <body>
-        <!-- <header>
-            <h2 class="logo">Photography</h2>
-            <nav class="navigation">
-                <a href="Index.html">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#">Contact us</a>
-                <button type="submit" class="btnLogin">
-                    Log-in
-                </button>
-            </nav>
-        </header> -->
-        <div class="wrap">
-            <span class="icon-close">
-                <ion-icon name="close-outline"></ion-icon>
-            </span>
-            <div class="block">
-                <h2>
-                    Login
-                </h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"> <ion-icon name="mail-outline" ></ion-icon></span>
-                        <input type="email" required>
-                        <label>E-mail id</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="keypad-outline"></ion-icon></span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forget">
-                    <label><input type="checkbox">Remenber Me</label>
-                    <a href="#">Forgot Password?</a>
-                    </div>
-                    <button>Login</button>
-                    <div class="login-register">
-                        <p>
-                            <br>
-                            Don't have an account?
-                            <a href="#" class="register-link"> Register</a>
-                        </p>
-                    </div>
-                </form>
-            </div>
-            <div class="block_reg">
-                <h2>
-                    Registration
-                </h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"> <ion-icon name="person-circle-outline"></ion-icon></span>
-                        <input type="text" required>
-                        <label>Username</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"> <ion-icon name="mail-outline" ></ion-icon></span>
-                        <input type="email" required>
-                        <label>E-mail id</label>
-                    </div>
 
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="keypad-outline"></ion-icon></span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forget">
-                    <label><input type="checkbox">I agree to the <U>terms & conditions</U></label>
-                    <!-- <span id="popup">Terms&Conditions</span> -->
-                    </div>
-                    <button>Register</button>
-                    <div class="login-register">
-                        <p>
-                            <br>
-                            Already have an account?
-                            <a href="#" class="login-link"> Login</a>
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <script src="script-login.js">
-        </script>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-            </body>
- </html>
+*{
+    margin: 0%;
+    padding: 0%; 
+    box-sizing: border-box;
+ 
+ }
+ body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-image: url('Login_bg.jpeg');
+     background-repeat: no-repeat;
+     background-position:unset;
+     background-size: cover;
+     /* background-color: #000; */
+ }
+ .wrap.active-popup{
+     transform: scale(1);
+     
+ }
+ .wrap{
+     align-items: center;
+     justify-content: center;
+     color: black;
+     top: 100px;
+     position:relative;
+     padding-top: 25px;
+     width: 400px;
+     height: 440px;
+     float: inline-end;
+     overflow: hidden;
+     transform: scale(0);
+     background: transparent;
+     border: 2px dashed rgba(117, 73, 8, 0.791);
+     border-radius: 30px;
+     backdrop-filter: blur(30px);
+     transition: height .2s ease;
+     
+ }
+ .wrap.active{
+     height: 520px;
+     width: 420px;
+ }
+ .wrap .block{
+     transition: transform .18s ease;
+     transform: translateX(0);
+     width: 100%;
+     padding: 40px;
+     box-shadow: 10px;
+ }
+ .wrap.active .block {
+ transition: none;
+ transform: translateX(-420px);
+ }
+ .wrap .block_reg{
+     position: absolute;
+     transition: none;
+     transform: translate(420px, -400px);
+     padding: 18px;
+     width: 100%;
+     box-shadow: 10px;
+ }
+ .wrap.active .block_reg{
+     transition: transform .18s ease;
+     transform: translateY(-400px);
+ }
+ .wrap .icon-close{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 45px;
+     height: 45px;
+     justify-content: center;
+     display: flex;
+     align-items: center;
+     border-bottom-left-radius: 20px;
+     cursor: pointer;
+     z-index: 1;
+ }
+ .block h2{
+   font-size: 2em;
+   color: rgba(117, 73, 8, 0.791);  
+   text-align: center;
+   text-shadow: 5px rgba(3, 53, 76, 0.61);
+   outline: 10px;
+ }
+ .block_reg h2{
+     font-size: 2em;
+     color: rgba(117, 73, 8, 0.791);  
+     text-align: center;
+     text-shadow: 5px rgba(3, 53, 76, 0.61);
+     outline: 10px;
+   }
+ .input-box{
+     position: relative;
+     width: 100%;
+     height: 50px;
+     border-bottom: 2px solid rgb(219, 145, 35);
+     margin: 30px 0;
+ }
+ .input-box label{
+     position: absolute;
+     top: 50%;
+     left: 40px;
+     transform: translate(-50%);
+     font-size: 1em;
+     color: rgba(117, 73, 8, 0.791);
+     font-weight: 500;
+     pointer-events: none;
+ }
+ .input-box input:focus~label,
+ .input-box input:valid~label{
+     top: -5px;
+     transition-duration: .6s ;
+ }
+ .input-box input{
+     width: 100%;
+     height: 100%;
+     background: transparent;
+     border: none;
+     outline: none;
+     font-size: 1em;
+     font-weight: 600;
+     padding: 0 35px 0 5px;
+ }
+ .input-box .icon{
+  position:relative;
+  left: 5px;
+  justify-content: end;
+  top: 26px;
+  margin-right: 5px;
+  display: flex;
+ }
+ .remember-forget{
+     font-size: .9em;
+     color: rgba(117, 73, 8, 0.791);
+     font-weight: 500;
+     margin: -15px 0 15px;
+     justify-content: space-between;
+     display: flex;
+     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+ .remember-forget label input{
+     accent-color: rgba(117, 73, 8, 0.791);
+     margin-right: 3px;
+ }
+ .remember-forget a{
+     position: relative;
+     color: rgba(4, 54, 78, 0.76);
+     text-decoration: none;
+     margin-left: 40px;
+     font-size: 1em;
+     font-weight: 500;
+ }
+ .remember-forget a::after{
+     content: '';
+     position: absolute;
+     width: 100%;
+     left: 0;
+     bottom: -6px;
+     height: 3px;
+     background: rgba(3, 53, 76, 0.61);
+     border-radius: 5px;
+     transform: scaleX(0);
+     transition: transform .5s;
+     }
+ .remember-forget a:hover::after{
+     transform-origin: left;
+     transform: scaleX(1);
+     }
+     .remember-forget u{
+        cursor: pointer;
+        font-size: 15px;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        color: #000;
+        }
+    /* .remember-forget {
+      position: relative;
+      padding-top: 5%;
+      font-size: .9em;
+      color: rgba(117, 73, 8, 0.791);
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    } */
+    
+    .popup {
+      position: absolute;
+      top: 70%;
+      font-size: 14px;
+      color: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .remember-forget:hover .popup {
+      top: -15px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    
+    svg:hover label,
+    svg:hover .popup {
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+      border: 2px;
+    
+    }
+    
+    .remember-forget:hover .popup,
+    .remember-forget:hover .popup::before {
+      border-radius: 6px;
+      border: 2px;
+      top: 70%;
+      padding: 10px ; 
+      background: #fff;
+      color: #000;
+    }
+
+  .block button,
+  .block_reg button{
+     font-size: medium;
+     font-weight: 400;
+     /* background-color: rgba(117, 73, 8, 0.791); */
+     height: 45px;
+     width: 100%;
+     border: none;
+     padding: 1em;
+     padding-left: 3em;
+     padding-right: 3em;
+     border: 2px dashed rgba(117, 73, 8, 0.791);
+     border-radius: 15px;
+     background-color: #EADDCA;
+     box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+     transition: .1s ease-in-out, .4s color;
+   }
+   
+   button:active {
+     transform: translateX(0.1em) translateY(0.1em);
+     box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+   }
+ .login-register{
+     font-size: .9em;
+     color: rgba(168, 104, 9, 0.945);
+     justify-content: space-between;
+     text-align: center;
+     margin-top: 10px;
+ }
+ .login-register a{
+     text-decoration: none;
+     font-weight: 500;
+     color: rgba(4, 54, 78, 0.76);
+ }
+ .login-register a:hover{
+     text-decoration: underline;
+ }
+ 
