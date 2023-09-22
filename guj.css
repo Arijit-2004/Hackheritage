@@ -1,10 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0%;
+    padding: 0%; 
+    box-sizing: border-box;
+ 
+ }
+ header{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 100px;
+     background-color: rgba(245, 153, 16, 0.945);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     z-index: 99;
+ }
+ body{
+
+    background-image: url('bg_login.jpg');
+    background-repeat: no-repeat;
+    background-position:unset;
+    background-size:cover;
+}
+ .logo{
+     user-select: none;
+     font-size: 2em;
+ }
+ .navigation .h a{
+     position: relative;
+     color: rgba(4, 54, 78, 0.76);
+     text-decoration: none;
+     margin-left: 40px;
+     font-size: 1.6em;
+     font-weight: 500;
+ }
+ .navigation h1{
+    position: relative;
+    color: rgba(4, 54, 78, 0.76);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 1.6em;
+    font-weight: 200;
+ }
+ .navigation button{
+    background-color: transparent;
+    border: transparent;
+    padding: 0%;
+
+ }
+ .navigation .h a::after
+ {
+     content: '';
+     position: absolute;
+     width: 100%;
+     left: 0;
+     bottom: -6px;
+     height: 3px;
+     background: rgba(3, 53, 76, 0.61);
+     border-radius: 5px;
+     transform: scaleX(0);
+     transition: transform .5s;
+ }
+ .navigation .h a:hover::after{
+     transform-origin: left;
+     transform: scaleX(1);
+ }
+ .navigation .btnLogin{
+     position: relative;
+     width: 130px;
+     height: 50px;
+     background: transparent;
+     border: 2px solid ;
+     outline: none;
+     border-radius: 10px;
+     cursor: pointer;
+     font-size: 1.1em;
+     font-weight: 200;
+     margin-left: 40px;
+     transition: .5s;
+ }
+ .navigation .btnLogin:hover {
+     background-color: rgba(210, 251, 253, 0.668);
+     color: rgb(9, 174, 155);
+ }
+ body{
+    background-color: black;
+    color: aliceblue;
+    font-family:'Poppins',sans-serif ;
+    padding: 0%;
+    margin: 0%;
+}
+section{
+    display: grid;
+    align-content: left;
+    place-items: left;
+    min-height: 50vh;
+    padding: 10%;
+    padding-top: 20%;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition:all 2.8s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+
+.dropdown-content {
+    display: none;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    background-color: #212121;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 0%;
+  }
+  
+  .dropdown-content a {
+    color: rgba(168, 104, 9, 0.945);
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+    transition: 0.1s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(168, 104, 9, 0.945);
+    color: #212121;
+  }
+  
+  .dropdown-content a:focus {
+    background-color: #212121;
+    color: #4CAF50;
+  }
+  
+  .dropdown-content #top:hover {
+    border-radius: 13px 13px 0px 0px;
+  }
+  
+  .dropdown-content #bottom:hover {
+    border-radius: 0px 0px 13px 13px;
+  }
+  
+  .drphover button {
+    border-radius: 15px 15px 0px 0px;
+  }
+  
+  .drp:hover .dropdown-content {
+    display: block;
+  }
 .graphbox{
     position:relative;
-    width: 95%;
-    padding: 20px;
+    width: 100%;
+    padding: 10px;
     display: grid;
-    grid-template-columns: .8fr 1.6fr;
-    grid-gap: 70px;
+    grid-template-columns: 1.5fr 2.5fr;
+    grid-gap: 20px;
     min-height: 200px;
 }
 .graphbox .box{
