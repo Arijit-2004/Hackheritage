@@ -258,4 +258,49 @@ section{
     justify-content: center;
     align-items: center;
   }
-  
+    .logo-hidden{
+    bottom: 0%;
+
+  }
+  .logo-hidden h2{
+    margin-bottom: 140px;
+  }
+  .logo-hidden button {
+    left: 40px;
+ margin-top: 40px;
+ appearance: button;
+ background-color: #ffffff;
+ border: solid transparent;
+ justify-content: space-between;
+ border-radius: 200px;
+ color: #000000;
+ font-size: 15px;
+ font-weight: 700;
+ letter-spacing: 2px;
+ line-height: 20px;
+ padding: 62px 38px;
+ box-shadow: 5px 5px 5px;
+ text-align: center;
+ margin: 20px;
+ text-transform: uppercase;
+}
+.logo_hidden_2 button{
+  left: 40px;
+  margin-top: 40px;
+  appearance: button;
+  background-color: #ffffff;
+  border: solid transparent;
+  justify-content: space-between;
+  border-radius: 200px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 20px;
+  padding: 62px 50px;
+  box-shadow: 5px 5px 5px;
+  text-align: center;
+  margin: 20px;
+  text-transform: uppercase;
+  }
+
