@@ -12,6 +12,7 @@
      width: 100%;
      padding: 20px 100px;
      background-color: aquamarine;
+  
      display: flex;
      align-items: center;
      justify-content: space-between;
@@ -20,6 +21,7 @@
  .logo{
      user-select: none;
      font-size: 2em;
+
  }
  .navigation a{
      position: relative;
@@ -83,21 +85,58 @@ section{
     min-height: 100vh;
     padding: 20%;
 }
-.ava{
-    display: inline-flexbox;
+.slider {
+  position: relative;
+  width: 45%;
+  overflow: hidden;
+  align-items: center;
+  left: 400px;
 }
-.ava img{
-  size: 50px 60px;
+.images {
+  display: flex;
+  width: 100%;
 }
-.ava:nth-child(2){
-    transition-delay: 50ms;
+.images img {
+  height: 400px;
+  width: 100%;
+  transition: all 0.15s ease;
 }
-.ava:nth-child(3){
-    transition-delay: 50ms;
+.images input {
+  display: none;
 }
-.ava:nth-child(4){
-    transition-delay: 50ms;
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
+.dots label {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: solid #fff 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin: 5px;
+}
+.dots label:hover {background: #fff;}
+#img1:checked ~ .m1 {
+  margin-left: 0;
+  width: 100%;
+}
+#img2:checked ~ .m2 {
+  margin-left: -100%;
+  width: 130%;
+}
+#img3:checked ~ .m3 {
+  margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+  margin-left: -300%;
+}
+#img5:checked ~ .m4 {
+  margin-left: -300%;
+}
+
 
 .hidden{
     opacity: 0;
