@@ -39,7 +39,7 @@ const signIn = () => {
   firebase.auth().signInWithEmailAndPassword(email, password)
       .then((result) => {
           // Signed in 
-          window.location.replace('/reg_index.html')
+          window.location.replace('/Main.html')
         //   document.write("You are Signed In")
           console.log(result)
       })
