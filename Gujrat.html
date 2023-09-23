@@ -7,117 +7,175 @@
     <link rel="stylesheet" href="guj.css">
 </head>
 <body>
-    <div class="graphbox">
-        <div class="box">
-            <canvas id="myChart"></canvas>
+    <header>
+        <h2 class="logo"> Gujrat Dropout Rates</h2>
+        <nav class="navigation">
+            <button class ="h">
+                <a href="Index.html">Home</a>
+                <a href="#foot">About Us</a>
+                <a href="#">Contact Us</a>
+            </button>
+            <button class ="drp">
+                <h1>States</h1>
+                <span class="dropdown-content">
+                  <a id="top" href="#">Gujrat</a>
+                  <a id="middle" href="#">Maharashtra</a>
+                  <a id="bottom" href="#">West Bengal</a>
+                </span>
+            </button>
+        </nav>
+    </header>
+    <section>
+      <body>
+        <div class="graphbox">
+            <div class="box">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="box">
+              <canvas id="ear"></canvas>
+            </div>
         </div>
-        <div class="box">
-          <canvas id="ear"></canvas>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-    <script>
-        const ctx = document.getElementById('myChart');
-        const ear = document.getElementById('ear');
-        new Chart(ctx, {
-          type: 'polarArea',
-          data: {
-            labels: ['2021-22', '2020-21', '2019-20', '2018-19', '2017-18', '2016-17'],
-            datasets: [{
-              label: '# of Votes',
-              data: [7.63, 4.16, 9.97, 11.167, 2.43, 4.23],
-            //   backgroundColor: [
-            //     'rgba(225,99,132,1)',
-            //     'rgba(54,162,235,1)',
-            //     'rgba(255,206,86,1)',
-            //     'rgba(75,192,192,1)',
-            //     'rgba(153,102,255,1)',
-            //     'rgba(255,159,64,1)'
-            //   ]
-            //   borderColor: [
-            //   'rgba(225,99,132,1)',
-            //     'rgba(54,162,235,1)',
-            //     'rgba(255,206,86,1)',
-            //     'rgba(75,192,192,1)',
-            //     'rgba(153,102,255,1)',
-            //     'rgba(255,159,64,1)'
-            //   ]
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
+        <section><p>
+            The dropout rate in Gujarat is constantly rising, despite the Bharatiya Janata Party (BJP) leadership's claims that the state has great educational facilities. This is demonstrated by data provided by various government departments, as stated in a report by The New Indian Express.
+            On February 13, 2023, the Department of Education stated that the dropout rate in Gujarat at the primary level was:
+            2017-18: 1.7%
+            2018-19: 2.3%
+            2019-20: 1.0%
+            2021-22: 0.0%
+            
+            While the dropout rate at the secondary level was:
+            2017-18: 20.6%
+            2018-19: 23.8%
+            2019-20: 23.7%
+            2020-21: 23.3%
+            2021-23: 17.9%
+        </p>
+            </section>
+        <section>
+            <p>
+                The National Family Health survey revealed that as compared to girls attending higher secondary as compared to 57% boys and 44% girls attending higher secondary school in 2019-21, nearly 15 years ago only 36% boys and 28% girls, were able to reach the landmark.
+    Reasons:
+    The National Family Health and Rajesh Bhat stated that, water availability and sanitation are the major factors for dropping out. 
+    Bharat Gajipara, the self-finance school association of Gujarat stated that for girls the distance between school and home is a major factor.
+    as student moves from primary school to a higher stage of school, the 
+    chance of dropping out of school increases 2.7 times. The chance of Muslim student discontinuing is 1.9 times 
+    than that of Hindus. Further he mentioned that the total number of siblings has been found to be a highly 
+    significant predictor of school drop-out. An increase in family size by one increases the chance of dropping out 
+    1.7 times.
+    To understand the differentials in school dropouts at national and at state levels. 
+    • To understand the main reasons for school dropout reported by household members.
+    • To examine the household and parental characteristics influencing the school dropouts in India.
+    Solutions:
+    •	We will be providing smart education.
+    
+            </p>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+        <script>
+            const ctx = document.getElementById('myChart');
+            const ear = document.getElementById('ear');
+            new Chart(ctx, {
+              type: 'polarArea',
+              data: {
+                labels: ['2021-22', '2020-21', '2019-20', '2018-19', '2017-18', '2016-17'],
+                datasets: [{
+                  label: '# of Votes',
+                  data: [7.63, 4.16, 9.97, 11.167, 2.43, 4.23],
+                //   backgroundColor: [
+                //     'rgba(225,99,132,1)',
+                //     'rgba(54,162,235,1)',
+                //     'rgba(255,206,86,1)',
+                //     'rgba(75,192,192,1)',
+                //     'rgba(153,102,255,1)',
+                //     'rgba(255,159,64,1)'
+                //   ]
+                //   borderColor: [
+                //   'rgba(225,99,132,1)',
+                //     'rgba(54,162,235,1)',
+                //     'rgba(255,206,86,1)',
+                //     'rgba(75,192,192,1)',
+                //     'rgba(153,102,255,1)',
+                //     'rgba(255,159,64,1)'
+                //   ]
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
               }
-            }
-          }
-        });
+            });
+    
+            new Chart(ear, {
+              type: 'line',
+              data: {
+                // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+            label: 'Boys',
+            data: [
+            {x: '2012-01-01', y:'0.21' },
+            {x: '2013-01-01', y:'0.5' },
+            {x: '2014-01-01', y:'0' },
+            {x: '2015-01-01', y:'0.7' },
+            {x: '2016-01-01', y:'0.6' },
+            {x: '2017-01-01', y:'0' },
+            {x: '2018-01-01', y:'1.9' },
+            {x: '2019-01-01', y:'0.9' },
+            {x: '2020-01-01', y:'0' },
+            {x: '2021-01-01', y:'0' },
+            ],
+            backgroundColor: [
+              'rgba(255, 26, 104, 0.2)',
+        
+            ],
+            borderColor: [
+              'rgba(255, 26, 104, 1)',
+              
+            ],
+            borderWidth: 1
+          },
+          {
+            label: 'Girls',
+            data: [
+            {x: '2012-01-01', y:'1.35' },
+            {x: '2013-01-01', y:'1.06' },
+            {x: '2014-01-01', y:'0' },
+            {x: '2015-01-01', y:'0.7' },
+            {x: '2016-01-01', y:'0.9' },
+            {x: '2017-01-01', y:'0' },
+            {x: '2018-01-01', y:'2.6' },
+            {x: '2019-01-01', y:'1' },
+            {x: '2020-01-01', y:'0' },
+            {x: '2021-01-01', y:'0' },
+            ],
+            backgroundColor: [
+              'rgba(108, 36, 104, 0.2)',
+        
+            ],
+            borderColor: [
+              'rgba(108, 26, 108, 1)',
+              
+            ],
+            borderWidth: 1
+          }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+           
+    </section>
 
-        new Chart(ear, {
-          type: 'line',
-          data: {
-            // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-        label: 'Boys',
-        data: [
-        {x: '2012-01-01', y:'0.21' },
-        {x: '2013-01-01', y:'0.5' },
-        {x: '2014-01-01', y:'0' },
-        {x: '2015-01-01', y:'0.7' },
-        {x: '2016-01-01', y:'0.6' },
-        {x: '2017-01-01', y:'0' },
-        {x: '2018-01-01', y:'1.9' },
-        {x: '2019-01-01', y:'0.9' },
-        {x: '2020-01-01', y:'0' },
-        {x: '2021-01-01', y:'0' },
-        ],
-        backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-    
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-          
-        ],
-        borderWidth: 1
-      },
-      {
-        label: 'Girls',
-        data: [
-        {x: '2012-01-01', y:'1.35' },
-        {x: '2013-01-01', y:'1.06' },
-        {x: '2014-01-01', y:'0' },
-        {x: '2015-01-01', y:'0.7' },
-        {x: '2016-01-01', y:'0.9' },
-        {x: '2017-01-01', y:'0' },
-        {x: '2018-01-01', y:'2.6' },
-        {x: '2019-01-01', y:'1' },
-        {x: '2020-01-01', y:'0' },
-        {x: '2021-01-01', y:'0' },
-        ],
-        backgroundColor: [
-          'rgba(108, 36, 104, 0.2)',
-    
-        ],
-        borderColor: [
-          'rgba(108, 26, 108, 1)',
-          
-        ],
-        borderWidth: 1
-      }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-      </script>
-       
+  </body>
 </body>
 </html>
